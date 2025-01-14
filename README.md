@@ -1,4 +1,4 @@
-# Speech-Recognition-Pipeline-with-Real-Time-MLOps-Deployment
+
 # Speech Recognition Pipeline with Real-Time MLOps Deployment
 
 This project demonstrates a scalable **Speech Recognition Pipeline** using **PyTorch** for transcription and **AWS Lambda** for serverless deployment. The solution integrates **MLOps frameworks** to enable real-time deployment and monitoring, reducing model deployment time by 40% and improving transcription accuracy by 20%.
