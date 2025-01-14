@@ -1,0 +1,33 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: speech-recognition-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: speech-recognition
+  template:
+    metadata:
+      labels:
+        app: speech-recognition
+    spec:
+      containers:
+      - name: speech-recognition
+        image: <ECR_IMAGE_URL>
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: speech-recognition-service
+spec:
+  selector:
+    app: speech-recognition
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+  type: LoadBalancer
